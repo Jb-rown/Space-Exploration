@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background: #0a0a23;
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: rgba(0, 0, 20, 0.9);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a.active {
+    color: #00d4ff;
+    border-bottom: 2px solid #00d4ff;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    color: #e0e0e0;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.hero, .blog-posts, .about, .contact, .latest-post {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #00d4ff;
+    color: #0a0a23;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #00aaff;
+}
+
+.blog-posts article {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.blog-posts article:hover {
+    transform: translateY(-5px);
+}
+
+.blog-posts h2 {
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+}
+
+.blog-posts p {
+    margin-bottom: 1rem;
+}
+
+.blog-posts a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.latest-post article {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #e0e0e0;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    padding: 0.75rem;
+    background: #00d4ff;
+    color: #0a0a23;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #00aaff;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 20, 0.9);
+    color: #e0e0e0;
+    width: 100%;
+}
+
+body.light {
+    background: #e0e0e0;
+    color: #0a0a23;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa');
+}
+
+body.light header, body.light footer {
+    background: rgba(0, 0, 50, 0.9);
+}
+
+body.light .logo, body.light .nav-links a.active, body.light .blog-posts h2, body.light .blog-posts a {
+    color: #0077b6;
+}
+
+body.light .cta-button, body.light .contact-form button {
+    background: #0077b6;
+    color: #fff;
+}
+
+body.light .cta-button:hover, body.light .contact-form button:hover {
+    background: #005f8c;
+}
+
+body.light .blog-posts article, body.light .latest-post article {
+    background: rgba(0, 0, 50, 0.05);
+}
+
+body.light .contact-form input, body.light .contact-form textarea {
+    background: rgba(0, 0, 50, 0.1);
+    color: #0a0a23;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 20, 0.9);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
