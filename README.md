@@ -3,6 +3,9 @@
 Welcome to the **Space Exploration Website**, a clean, responsive, and beginner-friendly static website that shares information about space exploration, astronomy, and related scientific discoveries. This project is crafted using basic web technologies: **HTML**, **CSS**, and **JavaScript**.
 
 ---
+---
+## Live Demo
+[Space-Exploration]()
 
 ## 📂 Project Structure
 
